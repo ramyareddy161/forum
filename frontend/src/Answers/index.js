@@ -14,12 +14,14 @@ class Answers extends Component{
         question_title : "",
         question_description : "",
         first_name :"",
-        auth_url : 'http://127.0.0.1:8000/api-basictoken-auth/',
-        jwt_url : 'http://127.0.0.1:8000/api-jwttoken-auth/',
+        // auth_url : 'http://127.0.0.1:8000/api-basictoken-auth/',
+        // jwt_url : 'http://127.0.0.1:8000/api-jwttoken-auth/',
+        auth_url : 'https://ramyareddy-colloquium.herokuapp.com/api-basictoken-auth/',
+        jwt_url : 'https://ramyareddy-colloquium.herokuapp.com/api-jwttoken-auth/',
     }
 
     componentDidMount(){
-        fetch('http://127.0.0.1:8000/forum/api/questions/'+this.props.match.params.id+'/')
+        fetch('https://ramyareddy-colloquium.herokuapp.com/forum/api/questions/'+this.props.match.params.id+'/')
         .then(response => response.json())
         .then(responseJson => {
             this.setState({answersList:responseJson});
@@ -28,7 +30,7 @@ class Answers extends Component{
             console.log(e);
             console.log("Error occured in second catch");
         });
-        fetch('http://127.0.0.1:8000/forum/api/questions/', {
+        fetch('https://ramyareddy-colloquium.herokuapp.com/forum/api/questions/', {
                 method: 'get', 
                 }).then(function(response) {
                     return response.json();

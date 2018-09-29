@@ -9,10 +9,12 @@ class AddQuestion extends Component{
     state={
         isLoggedin:this.props.isLoggedin,
         token:this.props.token,
-        // askquestion_url:'https://ramyareddy16.herokuapp.com/forum/api/questions/addquestion/',
-        askquestion_url:'http://127.0.0.1:8000/forum/api/questions/addquestion/',
-        auth_url : 'http://127.0.0.1:8000/api-basictoken-auth/',
-        jwt_url : 'http://127.0.0.1:8000/api-jwttoken-auth/',
+        askquestion_url:'https://ramyareddy-colloquium.herokuapp.com/forum/api/questions/addquestion/',
+        auth_url : 'https://ramyareddy-colloquium.herokuapp.com/api-basictoken-auth/',
+        jwt_url : 'https://ramyareddy-colloquium.herokuapp.com/api-jwttoken-auth/',
+        // askquestion_url:'http://127.0.0.1:8000/forum/api/questions/addquestion/',
+        // auth_url : 'http://127.0.0.1:8000/api-basictoken-auth/',
+        // jwt_url : 'http://127.0.0.1:8000/api-jwttoken-auth/',
         title:null,
         description:null,
     }
